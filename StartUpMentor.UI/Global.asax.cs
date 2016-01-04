@@ -21,6 +21,7 @@ namespace StartUpMentor.UI
             AutoMapper.Mapper.Initialize(c =>
             {
                 c.AddProfile<MappingConfiguration>();
+				c.AddProfile<UIMappingConfiguration>();
             });
         }
     }
