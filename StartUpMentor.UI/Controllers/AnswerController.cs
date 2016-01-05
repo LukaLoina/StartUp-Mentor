@@ -9,8 +9,7 @@ using StartUpMentor.Service.Common;
 using StartUpMentor.Repository.Common;
 using StartUpMentor.Common.Filters;
 using StartUpMentor.UI.Models;
-
-using AnswerType = StartUpMentor.Model.Answer;
+using StartUpMentor.Model.Common;
 
 namespace StartUpMentor.UI.Controllers
 {
@@ -73,7 +72,7 @@ namespace StartUpMentor.UI.Controllers
         {
             try
             {
-				var answer = AutoMapper.Mapper.Map<AnswerType>(collection);
+				var answer = AutoMapper.Mapper.Map<IAnswer>(collection);
 				await AnswerService.AddAsync(answer);
                 return RedirectToAction("Index");
             }

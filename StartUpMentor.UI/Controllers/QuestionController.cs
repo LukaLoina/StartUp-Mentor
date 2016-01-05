@@ -9,8 +9,7 @@ using StartUpMentor.Repository.Common;
 using System.Threading.Tasks;
 using StartUpMentor.UI.Models;
 using StartUpMentor.Common.Filters;
-
-using QuestionType = StartUpMentor.Model.Question;
+using StartUpMentor.Model.Common;
 
 namespace StartUpMentor.UI.Controllers
 {
@@ -72,7 +71,7 @@ namespace StartUpMentor.UI.Controllers
         {
             try
             {
-				var question = AutoMapper.Mapper.Map<QuestionType>(collection);
+				var question = AutoMapper.Mapper.Map<IQuestion>(collection);
 				await QuestionService.AddAsync(question);
 
                 return RedirectToAction("Index");
