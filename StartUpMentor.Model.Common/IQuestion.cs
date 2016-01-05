@@ -16,10 +16,11 @@ namespace StartUpMentor.Model.Common
 
         //FK for Field
         Guid FieldId { get; set; }
-        //One to one - Question can be related to one Field
-        IField Field { get; set; }
-
-        //One to many - One Question can have many Answers
-        ICollection<IAnswer> Answers { get; set; }
+		string UserId { get; set; }
+		//One to one - Question can be related to one Field
+		IField Field { get; set; }
+		IUser User { get; set; }
+		//One to many - One Question can have many Answers
+		ICollection<IAnswer> Answers { get; set; }
     }
 }

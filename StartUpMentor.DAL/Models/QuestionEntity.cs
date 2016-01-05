@@ -13,10 +13,11 @@ namespace StartUpMentor.DAL.Models
 
         //FK for Field
         public Guid FieldId { get; set; }
-        //One to one - Question can be related to one Field
-        public virtual FieldEntity Field { get; set; }
-
-        //One to many - One Question can have many Answers
-        public virtual ICollection<AnswerEntity> Answers { get; set; }
+		public string UserId { get; set; }
+		//One to one - Question can be related to one Field
+		public virtual FieldEntity Field { get; set; }
+		public virtual UserEntity User { get; set; }
+		//One to many - One Question can have many Answers
+		public virtual ICollection<AnswerEntity> Answers { get; set; }
     }
 }
