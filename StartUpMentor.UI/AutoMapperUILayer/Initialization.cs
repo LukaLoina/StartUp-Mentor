@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using StartUpMentor.Model.AutoMapper;
+using StartUpMentor.Model.AutoMapperModelLayerMapping;
+using StartUpMentor.UI.AutoMapperUIMapping;
 using Ninject;
 using Ninject.Modules;
-using AutoMapper;
 
 namespace StartUpMentor.UI.AutoMapperUILayer
 {

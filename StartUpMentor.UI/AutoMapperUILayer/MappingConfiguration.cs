@@ -8,7 +8,7 @@ using StartUpMentor.Model.Common;
 using StartUpMentor.DAL.Models;
 using StartUpMentor.UI.Models;
 
-namespace StartUpMentor.Model.AutoMapper
+namespace StartUpMentor.UI.AutoMapperUIMapping
 {
     public class UIMappingConfiguration : Profile
 	    {
